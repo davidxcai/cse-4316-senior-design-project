@@ -1,0 +1,7 @@
+node_modules
+dist
+# copied from node_modules by `npm install` (postinstall)
+public/ort
+public/mediapipe
+# trained on licensed ASL Citizen data: do not redistribute (see ../notes.md)
+public/model
