@@ -1,0 +1,10 @@
+node_modules
+dist
+# copied from node_modules by `npm install` (postinstall)
+public/ort
+public/mediapipe/wasm
+# the real val-clip landmark tensor is derived from the dataset: dev-only, keep out of git
+public/model/fixture.json
+.vercel
+.env*
+*.tsbuildinfo

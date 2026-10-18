@@ -1,9 +1,9 @@
 """Phase 6 (quick version): export a trained checkpoint to ONNX for the browser demo.
 
 Usage: python export_onnx.py [run=hands]
-Writes ../web/public/model/{sign_gru.onnx,labels.json,fixture.json}.
+Writes ../public/model/{sign_gru.onnx,labels.json,fixture.json}.
 fixture.json holds one real val clip's input tensor + the PyTorch logits, so the browser
-preprocessing/runtime can be checked against Python (see web/src/lib/signModel.md).
+preprocessing/runtime can be checked against Python (see src/lib/signModel.md).
 """
 import json, sys
 from pathlib import Path
@@ -14,7 +14,7 @@ from dataset import ClipDataset
 from train import SignGRU
 
 run = sys.argv[1] if len(sys.argv) > 1 else "hands"
-out = Path("../web/public/model")
+out = Path("../public/model")
 out.mkdir(parents=True, exist_ok=True)
 
 ck = torch.load(Path("runs") / run / "best.pt", map_location="cpu")
