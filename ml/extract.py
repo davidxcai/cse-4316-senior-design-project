@@ -9,7 +9,7 @@ without re-extracting. Arrays per clip (T = number of frames, NaN where not dete
 x, y are normalized image coordinates, z is relative depth.
 Resumable: clips that already have an .npz are skipped.
 
-Usage: python extract.py [workers=8]
+Usage: python extract.py [workers=8] [clips.csv=data/subset.csv]
 """
 import csv, sys, time
 from multiprocessing import Pool
@@ -85,7 +85,8 @@ def work(video):
 if __name__ == "__main__":
     workers = int(sys.argv[1]) if len(sys.argv) > 1 else 8
     OUT.mkdir(parents=True, exist_ok=True)
-    videos = [r["video"] for r in csv.DictReader(open("data/subset.csv", newline=""))]
+    src = sys.argv[2] if len(sys.argv) > 2 else "data/subset.csv"
+    videos = [r["video"] for r in csv.DictReader(open(src, newline=""))]
     todo = [v for v in videos if not (OUT / (Path(v).stem + ".npz")).exists()]
     print(f"{len(videos)} clips, {len(videos) - len(todo)} done, {len(todo)} to do, {workers} workers", flush=True)
     t0, errors = time.time(), []
