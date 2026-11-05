@@ -433,7 +433,7 @@ Needed by user accounts (7.1). No mockup yet.
 ┌──────────────────────────┐   ┌──────────────────────────┐
 │ ✋ signify          1/2   │   │ ✋ signify          2/2   │
 │ [ Email            ]     │   │ [ Name             ]     │
-│ [ Password         ]     │   │ ⇄ [ Right ] [ Left ]     │
+│ [ Password         ]     │   │ ⇄ [ Left ] [ Right ]     │
 │ [→ Next]                 │   │ [→ Start]                │
 └──────────────────────────┘   └──────────────────────────┘
 ```
