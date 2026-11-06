@@ -331,13 +331,15 @@ export class Recognizer {
 
     // other letters and digits 0-9: static handshape, judged against the allowed letters/digits only
     if (expect.kind !== "sign") {
-      const logp = await handshape.clipLogProbs(frames, aspect);
-      if (!logp) return rejected("no-hand");
+      const raw = await handshape.clipLogProbs(frames, aspect);
+      if (!raw) return rejected("no-hand");
+      const isLetter = (l: string) => /[A-Z]/.test(l);
+      const logp = expect.kind === "letter" ? raw.map((v, i) => (isLetter(handshape.labels[i]) ? v : -Infinity)) : raw;
       const { expected, allowed } = candidates((item) => {
         const l = handshapeLabelOf(item);
         return l === undefined ? [] : [handshape.labels.indexOf(l)];
       });
-      return decideSign(logp, expected, allowed, HANDSHAPE_DECISION_DEFAULTS);
+      return decideSign(logp, expected, allowed, HANDSHAPE_DECISION_DEFAULTS[expect.kind]);
     }
 
     // signs

@@ -63,4 +63,8 @@ Letters and digits (handshape model):
   as optimistic.
 - Pairs that are the same handshape (V/2, W/6, O/0) are kept apart only because a lesson allows letters or digits,
   not both. Don't mix letters and digits in one `allowed` list.
-- The rejection thresholds for letters and digits are untuned starting values.
+- Rejection is tuned per lesson kind (`ml/handshape/eval_thresholds.py`; random signs from other people used as the
+  "learner did something else" case). On held-out signers, per target:
+  - letters A–Z: 94% accepted, 1.2% of random signs accepted
+  - fist letters A S T M N E: 97% accepted, 1.6% of random signs accepted
+  - digits 1–9: 98% accepted, 2.0% of random signs accepted

@@ -28,10 +28,18 @@ export const SIGN_DECISION_DEFAULTS = {
 export type SignDecisionConfig = typeof SIGN_DECISION_DEFAULTS;
 
 /**
- * Same rule for letters/digits (handshape model; the "logits" are log clip-averaged probabilities). Starting values,
- * not tuned yet: there is no held-out negative set of webcam fingerspelling to tune them on.
+ * Same rule for letters and digits (handshape model; the "logits" are log clip-averaged probabilities).
+ * Letters are decided with the digit classes removed first (lessons never mix the two, and digits otherwise soak up
+ * the mass of same-shaped letters: W/6, V/2, O/0); digits use the full distribution.
+ * Tuned with ml/handshape/eval_thresholds.py (2026-11-05) on held-out signers, per lesson target:
+ *   letters A-Z   accept 94%, random sign accepted 1.2%      fist letters (A S T M N E)  97%, 1.6%
+ *   digits 1-9    accept 98%, random sign accepted 2.0%      (no held-out fluent clips of 5)
+ * Letter positives are ASL-HG stills grouped into pseudo-clips, so expect less on webcam.
  */
-export const HANDSHAPE_DECISION_DEFAULTS: SignDecisionConfig = { temperature: 1, minAllowedMass: 0.2, minShare: 0.4 };
+export const HANDSHAPE_DECISION_DEFAULTS: { letter: SignDecisionConfig; number: SignDecisionConfig } = {
+  letter: { temperature: 1, minAllowedMass: 0.6, minShare: 0.4 },
+  number: { temperature: 1, minAllowedMass: 0.7, minShare: 0.7 },
+};
 
 export interface SignCandidate {
   item: Item;
