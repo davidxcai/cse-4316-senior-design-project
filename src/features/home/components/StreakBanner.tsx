@@ -2,7 +2,7 @@ import { IconFlame, IconStar } from "@tabler/icons-react";
 import { useStreak } from "../../../hooks/useStreak";
 import HomeError from "./HomeError";
 import ResumeButton from "./ResumeButton";
-import StatItem from "./StatItem";
+import StatItem from "../../../components/StatItem";
 import WeekStrip from "./WeekStrip";
 
 export default function StreakBanner() {

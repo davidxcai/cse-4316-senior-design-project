@@ -1,8 +1,8 @@
 import { IconArrowRight, IconBook, IconCheck, IconClock, IconLock } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 import type { UnitProgress, UnitStatus } from "../../../domain/progress";
-import { unitStyle } from "../unitStyle";
-import UnitTile from "./UnitTile";
+import { unitStyle } from "../../../components/unit/unitStyle";
+import UnitTile from "../../../components/unit/UnitTile";
 
 function StatusBadge({ status }: { status: UnitStatus }) {
   if (status === "in-progress") return <span className="badge badge-primary badge-soft">In progress</span>;

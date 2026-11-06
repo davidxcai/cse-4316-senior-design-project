@@ -1,5 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import UnitPage from "../../features/unit/UnitPage";
 
 export const Route = createFileRoute("/_app/unit/$unitId")({
-  component: () => <h1 className="text-2xl font-bold">Unit</h1>,
+  component: UnitRoute,
 });
+
+function UnitRoute() {
+  const { unitId } = Route.useParams();
+  return <UnitPage unitId={Number(unitId)} />;
+}

@@ -50,3 +50,23 @@ export function resumeTarget(units: UnitProgress[]): { unitId: number; lessonId:
   const next = units.find((u) => u.status !== "locked" && u.status !== "completed" && u.currentLessonId);
   return next?.currentLessonId ? { unitId: next.unit.id, lessonId: next.currentLessonId } : null;
 }
+
+export type LessonRowStatus = "done" | "current" | "available" | "locked";
+
+/**
+ * Row statuses inside one unit [L.4–5, L.8]. A row unlocks when the row before it is done (the first row is open
+ * whenever the unit is). 'current' = the first unlocked row that isn't done; other unlocked, not-done rows (gaps
+ * left by rows added later) are 'available'. Done rows stay reopenable. A locked unit locks every row.
+ */
+export function lessonRowStatuses(progress: UnitProgress, completed: ReadonlySet<string>): LessonRowStatus[] {
+  if (progress.status === "locked") return progress.unit.lessons.map(() => "locked");
+  let currentTaken = false;
+  return progress.unit.lessons.map((lesson, i, rows): LessonRowStatus => {
+    if (completed.has(lesson.id)) return "done";
+    const unlocked = i === 0 || completed.has(rows[i - 1].id);
+    if (!unlocked) return "locked";
+    if (currentTaken) return "available";
+    currentTaken = true;
+    return "current";
+  });
+}

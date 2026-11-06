@@ -1,26 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useCameraPreference } from "../../../hooks/useCameraPreference";
-import { isRecognizable, useRecognizer } from "../../../recognition";
+import { useCallback, useEffect, useState } from "react";
+import { useSignCamera } from "../../../hooks/useSignCamera";
+import { isRecognizable } from "../../../recognition";
 import type { AttemptPhase, AttemptResult } from "../../../recognition";
 import { HELLO } from "../tryItConfig";
 
-/** State machine of the landing "try it" demo. Nothing loads until `startCamera` is called. */
+/** State machine of the landing "try it" demo. Nothing loads until `camera.startCamera` is called. */
 export function useTryItDemo() {
-  const { status, error, start, stop, attempt } = useRecognizer();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const camera = useSignCamera();
+  const { status, attempt } = camera;
   const [phase, setPhase] = useState<AttemptPhase | null>(null);
   const [verdict, setVerdict] = useState<AttemptResult["verdict"] | null>(null);
-  const [deviceId] = useCameraPreference();
   const canRecognize = isRecognizable(HELLO);
 
-  const startCamera = useCallback(() => {
-    if (videoRef.current) start(videoRef.current, { dominantHand: "right", overlay: canvasRef.current, deviceId }).catch(() => {}); // surfaces via `error`
-  }, [start, deviceId]);
-
   const retry = useCallback(() => setVerdict(null), []);
-
-  useEffect(() => stop, [stop]);
 
   // one attempt per pass; a verdict ends it, retry() clears the verdict and the effect runs again
   useEffect(() => {
@@ -37,5 +29,5 @@ export function useTryItDemo() {
     };
   }, [status, canRecognize, verdict, attempt]);
 
-  return { videoRef, canvasRef, status, error, phase, verdict, canRecognize, startCamera, retry };
+  return { camera, phase, verdict, canRecognize, retry };
 }

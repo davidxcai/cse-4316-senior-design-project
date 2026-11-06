@@ -45,6 +45,9 @@ Mapping choices:
 - `currentLessonId` is the first row not yet done in an open, unfinished unit. That row is also the in-unit
   unlocking point for L.5: rows before it are done, rows after it are locked.
 
+`lessonRowStatuses(unitProgress, completed)` gives the per-row status inside a unit (done / current / available /
+locked) for the Unit page and the lesson lock check. See hooks/useLessonSession.md.
+
 `resumeTarget` returns the first open, unfinished unit, or null when every unit is complete.
 
 ## streak.ts
@@ -58,3 +61,9 @@ zone, built from y/m/d, so DST shifts can't skip or repeat a day.
 
 Times come from the server's `completed_at` (the client can't set it), so a streak can't be backdated. A user who
 changes time zone may see a day boundary move. That's accepted.
+
+## Lesson modules
+
+`lessonPlan.ts` and `lessonSession.ts` (see lessonPlan.md), plus `signContent.ts`, `cultureNotes.ts` and
+`signClips.ts` (see signContent.md). `Lesson.culture` comes from cultureNotes.ts. `findUnit` and `ALL_ITEMS` (the
+course-wide Recognize distractor pool) are in curriculum.ts.

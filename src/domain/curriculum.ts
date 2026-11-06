@@ -3,6 +3,10 @@
  * Pure data. Edit this file when curriculum.md changes. See domain.md for the mapping choices.
  */
 import type { Item } from "../recognition";
+import { CULTURE_NOTES, type CultureNote } from "./cultureNotes";
+import { itemKey } from "./signContent";
+
+export type { CultureNote };
 
 export type LessonKind = "lesson" | "quiz" | "review";
 
@@ -15,6 +19,10 @@ export type Lesson = {
   title: string;
   kind: LessonKind;
   items: Item[];
+  /** culture step content [S.24–26]; null = the lesson has no culture step */
+  culture: CultureNote | null;
+  /** quiz / review: ids of the regular lessons it covers, in order (used to spread questions evenly). [] for lessons */
+  covers: string[];
 };
 
 export type Unit = {
@@ -42,9 +50,6 @@ const numbers = (from: number, to: number): Item[] =>
   Array.from({ length: to - from + 1 }, (_, i) => ({ kind: "number", value: from + i }));
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-const itemKey = (item: Item) =>
-  item.kind === "sign" ? `sign:${item.gloss}` : item.kind === "letter" ? `letter:${item.char}` : `number:${item.value}`;
 
 /** Union of the lessons' items, first occurrence wins, order kept. */
 function mergeItems(lessons: readonly Lesson[]): Item[] {
@@ -188,22 +193,27 @@ const regularLessons = (unitId: number): Lesson[] =>
     title,
     kind: "lesson",
     items,
+    culture: CULTURE_NOTES[`${unitId}.${n}`] ?? null,
+    covers: [],
   }));
 
 function buildUnit(spec: UnitSpec): Unit {
   const lessons = regularLessons(spec.id);
   const rows: Lesson[] = [
     ...lessons,
-    { id: `${spec.id}.quiz`, unitId: spec.id, label: "", title: "Unit Quiz", kind: "quiz", items: mergeItems(lessons) },
+    { id: `${spec.id}.quiz`, unitId: spec.id, label: "", title: "Unit Quiz", kind: "quiz", items: mergeItems(lessons), culture: null, covers: lessons.map((l) => l.id) },
   ];
   for (const review of REVIEWS.filter((r) => r.unitId === spec.id)) {
+    const covered = review.covers.flatMap(regularLessons);
     rows.push({
       id: review.id,
       unitId: spec.id,
       label: "",
       title: review.title,
       kind: "review",
-      items: mergeItems(review.covers.flatMap(regularLessons)),
+      items: mergeItems(covered),
+      culture: null,
+      covers: covered.map((l) => l.id),
     });
   }
   return {
@@ -223,3 +233,10 @@ const LESSONS_BY_ID = new Map(UNITS.flatMap((u) => u.lessons).map((l) => [l.id, 
 export function findLesson(id: string): Lesson | undefined {
   return LESSONS_BY_ID.get(id);
 }
+
+export function findUnit(id: number): Unit | undefined {
+  return UNITS.find((u) => u.id === id);
+}
+
+/** Every distinct item in the course, in curriculum order. Distractor pool for Recognize questions. */
+export const ALL_ITEMS: readonly Item[] = mergeItems(UNITS.flatMap((u) => u.lessons));

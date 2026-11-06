@@ -2,7 +2,7 @@
 
 Layout for signed-in routes: daisyUI `drawer drawer-open` (always visible, desktop only) with `<Outlet/>` in `drawer-content` and `<Sidebar/>` in `drawer-side`.
 
-The `drawer-toggle` checkbox is controlled (`checked = expanded`) so daisyUI's `is-drawer-open:`/`is-drawer-close:` variants follow React state. State comes from `useSidebarState`, which resets on every navigation: collapsed on routes whose match has `staticData.focus`, expanded otherwise. Nothing is persisted (SB.6 cut).
+The sidebar has no pinned state: it is always a `w-16` rail and overlays to `w-56` only while hovered or keyboard-focused. The `drawer-toggle` checkbox is unused (`drawer-open` keeps it visible).
 
 ## Content area
-`drawer-content` is a `<main>` with `pr-8 py-6` and a `max-w-5xl` wrapper around `<Outlet/>`, left-aligned against the sidebar, so pages don't stretch to the full width. While collapsed it uses `pl-40` (10rem). That's exactly how far the hover overlay extends past the rail (`w-56` − `w-16`), so the overlay ends flush with the content and never covers it. The padding transitions along with the sidebar's slide. Pages shouldn't add their own outer padding.
+`drawer-content` is a `<main>` with `px-48 py-6` (12rem each side) around `<Outlet/>`, so left and right margins are equal. The left 12rem after the `w-16` rail puts the content edge at 16rem, past the `w-56` hover overlay, which never covers content. Pages shouldn't add their own outer padding.

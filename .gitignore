@@ -12,3 +12,4 @@ public/model/fixture.json
 # OS / tool scratch
 .DS_Store
 supabase/.temp
+scripts/.cache

@@ -1,25 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
+import CameraView from "../../../components/signing/CameraView";
+import SignVideo from "../../../components/signing/SignVideo";
 import { useTryItDemo } from "../hooks/useTryItDemo";
 import { HELLO_CLIP } from "../tryItConfig";
-import LearnCard from "./LearnCard";
-import ProduceCard from "./ProduceCard";
 
 export default function TryItHero() {
   const demo = useTryItDemo();
   return (
     <section className="mx-auto w-full max-w-5xl px-4 py-8">
       <div className="grid gap-4 md:grid-cols-2">
-        <LearnCard clip={HELLO_CLIP} />
-        <ProduceCard
-          videoRef={demo.videoRef}
-          canvasRef={demo.canvasRef}
-          status={demo.status}
-          error={demo.error}
-          phase={demo.phase}
-          verdict={demo.verdict}
-          onStart={demo.startCamera}
-        />
+        <SignVideo clip={HELLO_CLIP} />
+        <CameraView camera={demo.camera} phase={demo.phase} verdict={demo.verdict} />
       </div>
       <div className="mt-6 flex flex-col items-center gap-4">
         <h1 className="text-3xl font-bold">HELLO</h1>

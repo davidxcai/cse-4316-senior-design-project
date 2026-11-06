@@ -1,6 +1,6 @@
 import type { Icon } from "@tabler/icons-react";
 
-type Props = { icon: Icon; value: number; label: string; className?: string };
+type Props = { icon: Icon; value: number | string; label: string; className?: string };
 
 /** Icon + value only. `label` is for screen readers. */
 export default function StatItem({ icon: StatIcon, value, label, className }: Props) {

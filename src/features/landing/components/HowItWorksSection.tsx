@@ -4,7 +4,7 @@ import { IconArrowRight, IconBook, IconHandStop, IconScan } from "@tabler/icons-
 const STEPS: { Icon: ComponentType<{ size?: number }>; label: string }[] = [
   { Icon: IconBook, label: "Learn" },
   { Icon: IconScan, label: "Recognize" },
-  { Icon: IconHandStop, label: "Produce" },
+  { Icon: IconHandStop, label: "Sign" },
 ];
 
 export default function HowItWorksSection() {

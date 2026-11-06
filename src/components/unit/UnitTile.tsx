@@ -1,4 +1,4 @@
-import { unitStyle } from "../unitStyle";
+import { unitStyle } from "./unitStyle";
 
 export default function UnitTile({ unitId }: { unitId: number }) {
   const { icon: TileIcon, tile } = unitStyle(unitId);
