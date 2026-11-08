@@ -1,8 +1,8 @@
-import ChoiceGrid from "../../../components/signing/ChoiceGrid";
-import SignVideo from "../../../components/signing/SignVideo";
-import type { RecognizeQuestion } from "../../../domain/lessonPlan";
-import { itemKey, signInfo } from "../../../domain/signContent";
-import type { Item } from "../../../recognition";
+import ChoiceGrid from "./ChoiceGrid";
+import SignVideo from "./SignVideo";
+import type { RecognizeQuestion } from "../../domain/lessonPlan";
+import { itemKey, signInfo } from "../../domain/signContent";
+import type { Item } from "../../recognition";
 
 type Props = {
   question: RecognizeQuestion;

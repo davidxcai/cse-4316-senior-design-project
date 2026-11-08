@@ -7,7 +7,8 @@ Pipeline per clip:
   1. load the .npz and keep only the requested feature groups
   2. normalize relative to the body (shoulder midpoint = origin, shoulder width = 1)
   3. trim idle frames before/after the sign (no hands visible)
-  4. [train only] augment: rotate, scale, shift, mirror, jitter, random time crop
+  4. [train only] augment: rotate, scale, shift, mirror, jitter, random time crop; REVERSIBLE signs are also
+     played backwards half the time
   5. resample to exactly T frames, replace missing values with 0 and add presence flags
   6. optionally append frame-to-frame velocity
 
@@ -30,6 +31,12 @@ SUBSET_CSV = Path(__file__).parent / "data" / "subset.csv"
 
 POSE_IDX = [0, 11, 12, 13, 14, 15, 16]  # nose, shoulders, elbows, wrists
 L_SHOULDER, R_SHOULDER = 11, 12
+
+# Signs fluent signers make in either direction, where ASL Citizen mostly shows one. Training plays these clips
+# backwards half the time so both directions count as the sign. Only add a sign whose reverse is not another sign
+# (never a pair that differs only by direction), and check the direction split first: see eval_lessons.py.
+#   DEAF1  index finger ear -> chin in 35 of 39 clips; chin -> ear is just as common and is what many videos teach
+REVERSIBLE = {"DEAF1"}
 
 
 def _face_idx():
@@ -78,6 +85,11 @@ def load_clip(path, groups):
     if "blend" in groups:
         out["blend"] = z["blend"].astype(np.float32)
     return out
+
+
+def reverse(clip):
+    """The clip played backwards (velocity is computed later, so it flips with it)."""
+    return {k: v[::-1].copy() for k, v in clip.items()}
 
 
 def trim(clip, pad=3):
@@ -150,6 +162,7 @@ class ClipDataset(Dataset):
         self.groups, self.train, self.T, self.velocity, self.mirror_p = tuple(groups), train, T, velocity, mirror_p
         self.labels = labels or load_labels()
         self.rng = np.random.default_rng(seed)
+        self.reversible = {self.labels[g] for g in REVERSIBLE if g in self.labels}
         self.clips, self.y, self.videos, missing = [], [], [], 0
         for r in csv.DictReader(open(SUBSET_CSV, newline="")):
             if r["split"] != split:
@@ -173,4 +186,6 @@ class ClipDataset(Dataset):
 
     def __getitem__(self, i):
         c = augment(self.clips[i], self.rng, self.mirror_p) if self.train else self.clips[i]
+        if self.train and self.y[i] in self.reversible and self.rng.random() < 0.5:
+            c = reverse(c)
         return to_tensor(c, self.groups, self.T, self.velocity), self.y[i]

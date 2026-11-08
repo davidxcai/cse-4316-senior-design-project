@@ -1,10 +1,10 @@
 import { IconBulb } from "@tabler/icons-react";
-import SignVideo from "../../../components/signing/SignVideo";
-import type { SignTask } from "../../../domain/lessonPlan";
-import type { AttemptVerdict, SignRecord } from "../../../domain/lessonSession";
-import { signInfo } from "../../../domain/signContent";
-import { useSignCamera } from "../../../hooks/useSignCamera";
-import { useSignAttempts } from "../hooks/useSignAttempts";
+import SignVideo from "./SignVideo";
+import type { SignTask } from "../../domain/lessonPlan";
+import type { AttemptVerdict, SignRecord } from "../../domain/lessonSession";
+import { signInfo } from "../../domain/signContent";
+import { useSignCamera } from "../../hooks/useSignCamera";
+import { useSignAttempts } from "../../hooks/useSignAttempts";
 import LessonCamera from "./LessonCamera";
 
 type Props = {

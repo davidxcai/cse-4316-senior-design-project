@@ -3,8 +3,8 @@ import { itemKey } from "../../../domain/signContent";
 import type { useLessonSession } from "../../../hooks/useLessonSession";
 import CultureStep from "./CultureStep";
 import LearnStep from "./LearnStep";
-import RecognizeStep from "./RecognizeStep";
-import SignStep from "./SignStep";
+import RecognizeStep from "../../../components/signing/RecognizeStep";
+import SignStep from "../../../components/signing/SignStep";
 import WatchStep from "./WatchStep";
 
 type Props = { plan: LessonPlan; session: ReturnType<typeof useLessonSession> };

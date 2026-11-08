@@ -1,0 +1,284 @@
+{
+ "signs": {
+  "AXE1": 19,
+  "BACKPACK1": 19,
+  "BASKETBALL1": 19,
+  "BEE1": 19,
+  "BELT1": 19,
+  "BITE1": 21,
+  "BLACK": 15,
+  "BLUE": 15,
+  "BOY": 14,
+  "BREAKFAST1": 21,
+  "CANCER1": 18,
+  "CHRISTMAS1": 19,
+  "CIRCLE": 15,
+  "CONFUSED1": 18,
+  "COOK": 14,
+  "DARK1": 21,
+  "DEAF1": 20,
+  "DEAF2": 10,
+  "DECIDE1": 20,
+  "DEMAND1": 21,
+  "DEVELOP1": 19,
+  "DIFFERENT": 15,
+  "DINNER1": 18,
+  "DOG1": 24,
+  "DONTLIKE": 15,
+  "DOWNSIZE1": 18,
+  "DRAG1": 18,
+  "EAT1": 18,
+  "EDIT1": 19,
+  "ELEVATOR1": 19,
+  "FINE1": 19,
+  "FLOAT1": 18,
+  "FOREIGNER1": 18,
+  "FRIEND": 15,
+  "GIRL": 16,
+  "GREEN": 14,
+  "GUESS1": 18,
+  "HALLOWEEN1": 19,
+  "HEARING": 14,
+  "HELLO": 14,
+  "HOSPITAL1": 18,
+  "HURDLE/TRIP1": 22,
+  "INTERPRETER": 15,
+  "JEWELRY": 18,
+  "KNIGHT1": 18,
+  "LEARN": 15,
+  "LIKE": 15,
+  "LOCK1": 18,
+  "LUNCH1": 19,
+  "MAN": 15,
+  "MAPLE": 18,
+  "MEAT1": 18,
+  "MECHANIC1": 20,
+  "MEET": 16,
+  "MICROSCOPE1": 18,
+  "MOVIE1": 18,
+  "MOVIE2": 12,
+  "MY": 13,
+  "NAME": 14,
+  "NICE": 16,
+  "NO": 16,
+  "NOON1": 19,
+  "PARTY1": 20,
+  "PATIENT2": 19,
+  "PLAY": 14,
+  "PLEASE": 14,
+  "RAZOR2": 18,
+  "READ": 14,
+  "RED": 14,
+  "RIVER1": 19,
+  "ROCKINGCHAIR1": 20,
+  "RUN1": 15,
+  "RUN2": 16,
+  "SAME1": 13,
+  "SAME2": 14,
+  "SHAVE1": 19,
+  "SIGN": 15,
+  "SINK": 18,
+  "SORRY": 15,
+  "SQUARE": 15,
+  "SQUEEZE": 18,
+  "STUDENT": 14,
+  "SWIM1": 16,
+  "SWIM2": 15,
+  "TEACHER": 14,
+  "THANKYOU": 16,
+  "THEY1": 18,
+  "TRAVEL": 15,
+  "TRIANGLE": 16,
+  "TWINS1": 18,
+  "WANT1": 16,
+  "WANT2": 15,
+  "WHATFOR1": 20,
+  "WHITE": 14,
+  "WHO": 14,
+  "WOMAN1": 14,
+  "WOMAN2": 14,
+  "YELLOW": 16,
+  "YES": 15,
+  "YOUR": 16
+ },
+ "reversible": [
+  "DEAF1"
+ ],
+ "handshape": {
+  "A": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "B": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "C": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "D": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "E": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "F": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "G": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "H": {
+   "photos": 246,
+   "signers": 10,
+   "videos": 0
+  },
+  "I": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "J": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "K": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "L": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "M": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "N": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "O": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 16
+  },
+  "P": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "Q": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "R": {
+   "photos": 249,
+   "signers": 10,
+   "videos": 0
+  },
+  "S": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "T": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "U": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "V": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "W": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "X": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "Y": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "Z": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "1": {
+   "photos": 0,
+   "signers": 0,
+   "videos": 15
+  },
+  "2": {
+   "photos": 0,
+   "signers": 0,
+   "videos": 14
+  },
+  "3": {
+   "photos": 0,
+   "signers": 0,
+   "videos": 14
+  },
+  "4": {
+   "photos": 0,
+   "signers": 0,
+   "videos": 15
+  },
+  "5": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 0
+  },
+  "6": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 16
+  },
+  "7": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 14
+  },
+  "8": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 16
+  },
+  "9": {
+   "photos": 250,
+   "signers": 10,
+   "videos": 16
+  }
+ }
+}

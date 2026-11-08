@@ -61,7 +61,7 @@ export function seededRng(seed: number): () => number {
 /** A random non-negative int32, for seededRng. */
 export const newSeed = (): number => Math.floor(Math.random() * 0x7fffffff);
 
-function shuffle<T>(xs: readonly T[], rng: () => number): T[] {
+export function shuffle<T>(xs: readonly T[], rng: () => number): T[] {
   const out = [...xs];
   for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
@@ -70,7 +70,7 @@ function shuffle<T>(xs: readonly T[], rng: () => number): T[] {
   return out;
 }
 
-function dedupe(items: readonly Item[]): Item[] {
+export function dedupe(items: readonly Item[]): Item[] {
   const seen = new Set<string>();
   return items.filter((item) => {
     const key = itemKey(item);
@@ -86,7 +86,7 @@ const sameKind = (items: readonly Item[], kind: Item["kind"]) => items.filter((i
  * Distractors come from the lesson's own items of the same kind first, then from the rest of the course, so a
  * small lesson still gets 4 choices. Signs never sit next to letters or numbers as choices.
  */
-function recognizeQuestion(item: Item, lessonItems: readonly Item[], rng: () => number): RecognizeQuestion {
+export function recognizeQuestion(item: Item, lessonItems: readonly Item[], rng: () => number): RecognizeQuestion {
   const key = itemKey(item);
   const notItem = (i: Item) => itemKey(i) !== key;
   const local = shuffle(sameKind(lessonItems, item.kind).filter(notItem), rng);
@@ -100,11 +100,11 @@ function recognizeQuestion(item: Item, lessonItems: readonly Item[], rng: () => 
 }
 
 /** `allowed` for an item: every recognizable item of the same kind in `pool` (the whole lesson, not a sample). */
-function allowedFor(item: Item, pool: readonly Item[]): Item[] {
+export function allowedFor(item: Item, pool: readonly Item[]): Item[] {
   return sameKind(pool.filter(isRecognizable), item.kind);
 }
 
-const signTasks = (items: readonly Item[], pool: readonly Item[]): SignTask[] =>
+export const signTasks = (items: readonly Item[], pool: readonly Item[]): SignTask[] =>
   items.filter(isRecognizable).map((item) => ({ item, allowed: allowedFor(item, pool) }));
 
 const learnTasks = (items: readonly Item[]): LearnTask[] =>

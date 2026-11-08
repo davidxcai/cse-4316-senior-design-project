@@ -1,8 +1,8 @@
 import { IconPlayerPlay } from "@tabler/icons-react";
-import CameraView from "../../../components/signing/CameraView";
-import type { AttemptVerdict } from "../../../domain/lessonSession";
-import type { SignCamera } from "../../../hooks/useSignCamera";
-import type { AttemptPhase } from "../../../recognition";
+import CameraView from "./CameraView";
+import type { AttemptVerdict } from "../../domain/lessonSession";
+import type { SignCamera } from "../../hooks/useSignCamera";
+import type { AttemptPhase } from "../../recognition";
 
 type Props = {
   camera: SignCamera;

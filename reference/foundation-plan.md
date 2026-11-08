@@ -43,7 +43,7 @@ src/routes/
   _app/lesson.$lessonId.tsx  /lesson/:lessonId   staticData: { focus: true }
   _app/practice.tsx       /practice                (session sets focus itself)
   _app/profile.tsx        /profile
-  dev/recognizer.tsx      /dev/recognizer  current demo, no guard, not linked
+  dev/test.tsx            /dev/test        current demo, no guard, not linked
 ```
 
 - **URL change from the component tree:** the landing page owns `/`, so signed-in Home moves to `/home`. A signed-in visitor to `/` is redirected to `/home`. A fresh signed-in visit lands on Home [SB.7].
@@ -113,7 +113,7 @@ Built from daisyUI parts: `menu` for nav, `avatar` (placeholder initials) for th
 ## Phase 6: Placeholders and cleanup
 
 - Each route renders a page with only its name, so routing, guards and shells can be checked.
-- The current demo moves from `src/App.tsx` to a dev-only route (`/dev/recognizer`) so the ML session keeps a test page. The Mirror toggle stays there until the ML session replaces it with `dominantHand`.
+- The current demo moves from `src/App.tsx` to a dev-only route (`/dev/test`) so the ML session keeps a test page. The Mirror toggle stays there until the ML session replaces it with `dominantHand`.
 - Delete `src/App.tsx`.
 
 ## Phase 7: Docs
@@ -139,4 +139,4 @@ Per `component-conventions` §8: `Sidebar.md`, `AppShell.md`, `AuthProvider.md`,
    - `src/api/supabase.ts` is **not** created;
    - the guards and shells are built against the stub interface.
 3. **Signed-in Home is at `/home`.** A signed-in visitor to `/` is redirected there.
-4. **The recognition demo stays** as a test page at `/dev/recognizer`, kept for testing and possible expansion. It's dev-only (not linked from the sidebar), and it's reachable whether signed in or not.
+4. **The recognition demo stays** as a test page at `/dev/test`, kept for testing and possible expansion. It's dev-only (not linked from the sidebar), and it's reachable whether signed in or not.

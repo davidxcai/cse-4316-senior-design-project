@@ -307,6 +307,8 @@ Opened from a lesson row. Focus mode: the sidebar starts collapsed to the icon r
 
 Free practice with no lesson structure. Uses only signs from lessons the user has completed.
 
+> note (2026-11-06): built first as a simple version: pick one unit, endless Recognize → Sign rounds over its completed lessons' words, ✓ tally only (no ✗ / missed list, per positive reinforcement). See src/features/practice/practice.md. The rest of §4 is still the target.
+
 ### 4a. Setup
 
 ```

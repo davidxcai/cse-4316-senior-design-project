@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { itemKey } from "../../../domain/signContent";
-import type { AttemptVerdict } from "../../../domain/lessonSession";
-import type { SignCamera } from "../../../hooks/useSignCamera";
-import type { AttemptPhase, Item } from "../../../recognition";
+import { itemKey } from "../domain/signContent";
+import type { AttemptVerdict } from "../domain/lessonSession";
+import type { SignCamera } from "./useSignCamera";
+import type { AttemptPhase, Item } from "../recognition";
 
 /** How long a verdict stays on screen before the next attempt starts. */
 const FEEDBACK_MS = 1200;

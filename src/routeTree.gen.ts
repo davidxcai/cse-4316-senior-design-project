@@ -12,13 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as PublicRouteImport } from './routes/_public'
 import { Route as AppHomeRouteImport } from './routes/_app/home'
-import { Route as AppPracticeRouteImport } from './routes/_app/practice'
 import { Route as AppProfileRouteImport } from './routes/_app/profile'
 import { Route as PublicIndexRouteImport } from './routes/_public/index'
 import { Route as PublicSignInRouteImport } from './routes/_public/sign-in'
 import { Route as PublicSignUpRouteImport } from './routes/_public/sign-up'
-import { Route as DevRecognizerRouteImport } from './routes/dev/recognizer'
+import { Route as DevTestRouteImport } from './routes/dev/test'
 import { Route as AppLessonLessonIdRouteImport } from './routes/_app/lesson.$lessonId'
+import { Route as AppPracticeIndexRouteImport } from './routes/_app/practice.index'
+import { Route as AppPracticeUnitIdRouteImport } from './routes/_app/practice.$unitId'
 import { Route as AppUnitUnitIdRouteImport } from './routes/_app/unit.$unitId'
 
 const AppRoute = AppRouteImport.update({
@@ -32,11 +33,6 @@ const PublicRoute = PublicRouteImport.update({
 const AppHomeRoute = AppHomeRouteImport.update({
   id: '/home',
   path: '/home',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppPracticeRoute = AppPracticeRouteImport.update({
-  id: '/practice',
-  path: '/practice',
   getParentRoute: () => AppRoute,
 } as any)
 const AppProfileRoute = AppProfileRouteImport.update({
@@ -59,14 +55,24 @@ const PublicSignUpRoute = PublicSignUpRouteImport.update({
   path: '/sign-up',
   getParentRoute: () => PublicRoute,
 } as any)
-const DevRecognizerRoute = DevRecognizerRouteImport.update({
-  id: '/dev/recognizer',
-  path: '/dev/recognizer',
+const DevTestRoute = DevTestRouteImport.update({
+  id: '/dev/test',
+  path: '/dev/test',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppLessonLessonIdRoute = AppLessonLessonIdRouteImport.update({
   id: '/lesson/$lessonId',
   path: '/lesson/$lessonId',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPracticeIndexRoute = AppPracticeIndexRouteImport.update({
+  id: '/practice/',
+  path: '/practice/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPracticeUnitIdRoute = AppPracticeUnitIdRouteImport.update({
+  id: '/practice/$unitId',
+  path: '/practice/$unitId',
   getParentRoute: () => AppRoute,
 } as any)
 const AppUnitUnitIdRoute = AppUnitUnitIdRouteImport.update({
@@ -78,81 +84,87 @@ const AppUnitUnitIdRoute = AppUnitUnitIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof PublicIndexRoute
   '/home': typeof AppHomeRoute
-  '/practice': typeof AppPracticeRoute
   '/profile': typeof AppProfileRoute
   '/sign-in': typeof PublicSignInRoute
   '/sign-up': typeof PublicSignUpRoute
-  '/dev/recognizer': typeof DevRecognizerRoute
+  '/dev/test': typeof DevTestRoute
   '/lesson/$lessonId': typeof AppLessonLessonIdRoute
+  '/practice/$unitId': typeof AppPracticeUnitIdRoute
   '/unit/$unitId': typeof AppUnitUnitIdRoute
+  '/practice/': typeof AppPracticeIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof PublicIndexRoute
   '/home': typeof AppHomeRoute
-  '/practice': typeof AppPracticeRoute
   '/profile': typeof AppProfileRoute
   '/sign-in': typeof PublicSignInRoute
   '/sign-up': typeof PublicSignUpRoute
-  '/dev/recognizer': typeof DevRecognizerRoute
+  '/dev/test': typeof DevTestRoute
   '/lesson/$lessonId': typeof AppLessonLessonIdRoute
+  '/practice/$unitId': typeof AppPracticeUnitIdRoute
   '/unit/$unitId': typeof AppUnitUnitIdRoute
+  '/practice': typeof AppPracticeIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteWithChildren
   '/_public': typeof PublicRouteWithChildren
   '/_app/home': typeof AppHomeRoute
-  '/_app/practice': typeof AppPracticeRoute
   '/_app/profile': typeof AppProfileRoute
   '/_public/sign-in': typeof PublicSignInRoute
   '/_public/sign-up': typeof PublicSignUpRoute
-  '/dev/recognizer': typeof DevRecognizerRoute
+  '/dev/test': typeof DevTestRoute
   '/_public/': typeof PublicIndexRoute
   '/_app/lesson/$lessonId': typeof AppLessonLessonIdRoute
+  '/_app/practice/$unitId': typeof AppPracticeUnitIdRoute
   '/_app/unit/$unitId': typeof AppUnitUnitIdRoute
+  '/_app/practice/': typeof AppPracticeIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/home'
-    | '/practice'
     | '/profile'
     | '/sign-in'
     | '/sign-up'
-    | '/dev/recognizer'
+    | '/dev/test'
     | '/lesson/$lessonId'
+    | '/practice/$unitId'
     | '/unit/$unitId'
+    | '/practice/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/home'
-    | '/practice'
     | '/profile'
     | '/sign-in'
     | '/sign-up'
-    | '/dev/recognizer'
+    | '/dev/test'
     | '/lesson/$lessonId'
+    | '/practice/$unitId'
     | '/unit/$unitId'
+    | '/practice'
   id:
     | '__root__'
     | '/_app'
     | '/_public'
     | '/_app/home'
-    | '/_app/practice'
     | '/_app/profile'
     | '/_public/sign-in'
     | '/_public/sign-up'
-    | '/dev/recognizer'
+    | '/dev/test'
     | '/_public/'
     | '/_app/lesson/$lessonId'
+    | '/_app/practice/$unitId'
     | '/_app/unit/$unitId'
+    | '/_app/practice/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   AppRoute: typeof AppRouteWithChildren
   PublicRoute: typeof PublicRouteWithChildren
-  DevRecognizerRoute: typeof DevRecognizerRoute
+  DevTestRoute: typeof DevTestRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -176,13 +188,6 @@ declare module '@tanstack/react-router' {
       path: '/home'
       fullPath: '/home'
       preLoaderRoute: typeof AppHomeRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/_app/practice': {
-      id: '/_app/practice'
-      path: '/practice'
-      fullPath: '/practice'
-      preLoaderRoute: typeof AppPracticeRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/profile': {
@@ -213,11 +218,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PublicSignUpRouteImport
       parentRoute: typeof PublicRoute
     }
-    '/dev/recognizer': {
-      id: '/dev/recognizer'
-      path: '/dev/recognizer'
-      fullPath: '/dev/recognizer'
-      preLoaderRoute: typeof DevRecognizerRouteImport
+    '/dev/test': {
+      id: '/dev/test'
+      path: '/dev/test'
+      fullPath: '/dev/test'
+      preLoaderRoute: typeof DevTestRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app/lesson/$lessonId': {
@@ -225,6 +230,20 @@ declare module '@tanstack/react-router' {
       path: '/lesson/$lessonId'
       fullPath: '/lesson/$lessonId'
       preLoaderRoute: typeof AppLessonLessonIdRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/practice/': {
+      id: '/_app/practice/'
+      path: '/practice'
+      fullPath: '/practice/'
+      preLoaderRoute: typeof AppPracticeIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/practice/$unitId': {
+      id: '/_app/practice/$unitId'
+      path: '/practice/$unitId'
+      fullPath: '/practice/$unitId'
+      preLoaderRoute: typeof AppPracticeUnitIdRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/unit/$unitId': {
@@ -239,18 +258,20 @@ declare module '@tanstack/react-router' {
 
 interface AppRouteChildren {
   AppHomeRoute: typeof AppHomeRoute
-  AppPracticeRoute: typeof AppPracticeRoute
   AppProfileRoute: typeof AppProfileRoute
   AppLessonLessonIdRoute: typeof AppLessonLessonIdRoute
+  AppPracticeUnitIdRoute: typeof AppPracticeUnitIdRoute
   AppUnitUnitIdRoute: typeof AppUnitUnitIdRoute
+  AppPracticeIndexRoute: typeof AppPracticeIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
   AppHomeRoute: AppHomeRoute,
-  AppPracticeRoute: AppPracticeRoute,
   AppProfileRoute: AppProfileRoute,
   AppLessonLessonIdRoute: AppLessonLessonIdRoute,
+  AppPracticeUnitIdRoute: AppPracticeUnitIdRoute,
   AppUnitUnitIdRoute: AppUnitUnitIdRoute,
+  AppPracticeIndexRoute: AppPracticeIndexRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
@@ -273,7 +294,7 @@ const PublicRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRouteWithChildren,
   PublicRoute: PublicRouteWithChildren,
-  DevRecognizerRoute: DevRecognizerRoute,
+  DevTestRoute: DevTestRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

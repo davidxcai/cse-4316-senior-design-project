@@ -4,8 +4,8 @@ import type { LearnTask } from "../../../domain/lessonPlan";
 import { LEARN_REPS, type AttemptVerdict } from "../../../domain/lessonSession";
 import { signInfo } from "../../../domain/signContent";
 import { useSignCamera } from "../../../hooks/useSignCamera";
-import { useSignAttempts } from "../hooks/useSignAttempts";
-import LessonCamera from "./LessonCamera";
+import { useSignAttempts } from "../../../hooks/useSignAttempts";
+import LessonCamera from "../../../components/signing/LessonCamera";
 import SignCaption from "./SignCaption";
 
 type Props = {

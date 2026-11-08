@@ -9,16 +9,16 @@ glosses the model never saw (data/unseen.csv), which is the realistic case of a 
 
 Thresholds (temperature, minAllowedMass, minShare) are swept on val and the chosen ones reported on test.
 
-Usage: python eval_lessons.py [run=unit12_hands]
+Usage: python eval_lessons.py [run=unit12_hands_rev]
 """
-import csv, itertools, re, sys
+import collections, csv, itertools, re, sys
 from pathlib import Path
 import numpy as np
 import torch
-from dataset import LANDMARK_DIR, ClipDataset, load_clip, to_tensor, trim
+from dataset import LANDMARK_DIR, REVERSIBLE, ClipDataset, load_clip, reverse, to_tensor, trim
 from train import SignGRU
 
-run = sys.argv[1] if len(sys.argv) > 1 else "unit12_hands"
+run = sys.argv[1] if len(sys.argv) > 1 else "unit12_hands_rev"
 ck = torch.load(Path("runs") / run / "best.pt", map_location="cpu")
 labels = ck["labels"]
 names = [g for g, _ in sorted(labels.items(), key=lambda kv: kv[1])]
@@ -137,3 +137,26 @@ for L, lesson in LESSONS.items():
 print("\nweakest signs on test (accept, lesson, sign, #wrong, #rejected, #clips):")
 for row in sorted(per)[:8]:
     print(f"  {row[0]:.2f}  {row[1]}  {row[2]:<12} wrong {row[3]:>2}  rejected {row[4]:>2}  of {row[5]}")
+
+# REVERSIBLE signs (dataset.py) are correct in either direction. Held-out clips played backwards stand in for the
+# direction the dataset rarely shows; other signs' clips must still not pass as the reversible sign.
+if REVERSIBLE:
+    print("\nreversible signs on test, other direction = held-out clips played backwards:")
+    ds = ClipDataset("test", ck["groups"], labels=labels)
+    for g in sorted(REVERSIBLE):
+        idx = [i for i, y in enumerate(ds.y) if names[y] == g]
+        if not idx:
+            continue
+        with torch.no_grad():
+            back = model(torch.stack([to_tensor(reverse(ds.clips[i]), tuple(ck["groups"])) for i in idx])).numpy()
+        X = key(g)
+        for L, lesson in LESSONS.items():
+            if X not in lesson:
+                continue
+            fwd = verdicts(test, *best, lesson, X)
+            vb = verdicts(back, *best, lesson, X)
+            others = (keys_t != X) & (keys_t != "?")
+            tops = collections.Counter(names[j] for j in back.argmax(1))
+            print(f"  {L}  {g:<8} forward accept {(fwd[keys_t == X] == 'c').mean():.2f}  "
+                  f"backwards accept {(vb == 'c').mean():.2f} ({len(idx)} clips)  "
+                  f"other signs accepted as {X} {(fwd[others] == 'c').mean():.4f}  backwards top-1: {dict(tops.most_common(3))}")

@@ -11,9 +11,9 @@ import type { AttemptResult, Item } from "./types";
  *  3. within the allowed signs, renormalize; top share low = torn between allowed signs -> rejected "unsure"
  *  4. otherwise the top allowed sign is the answer: correct if it is the expected one, else wrong
  *
- * Thresholds chosen with ml/eval_lessons.py on val signers (unit12_hands, 2026-11-05). On held-out test signers,
- * per lesson target: 89% of real attempts accepted, 0.3% of other lesson signs and 1.5% of never-seen signs
- * wrongly accepted.
+ * Thresholds chosen with ml/eval_lessons.py on val signers (unit12_hands, 2026-11-05; unit12_hands_rev picked the
+ * same ones, 2026-11-06). On held-out test signers, per lesson target: 91% of real attempts accepted, 0.3% of other
+ * lesson signs and 1.3% of never-seen signs wrongly accepted.
  *
  * With allowed = [expect] only, step 3 always passes, so the outcome is correct or rejected, never wrong.
  */

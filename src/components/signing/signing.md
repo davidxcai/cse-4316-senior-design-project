@@ -1,6 +1,8 @@
 # components/signing
 
-Shared sign-exercise pieces used by the landing demo and the lesson page (and Practice later). Nothing here knows about lessons.
+Shared sign-exercise pieces used by the landing demo, the lesson page and Practice. Nothing here knows about lessons or practice sessions.
+
+- `RecognizeStep`, `SignStep`, `LessonCamera`: the Recognize and Sign cards and their camera wrapper, shared by lessons and Practice. Behavior is described in features/lesson/lesson.md. `SignStep` owns the camera, so callers keep it mounted (unkeyed) across consecutive Sign cards.
 
 - `SignVideo`: YouTube clip (youtube-nocookie via the IFrame Player API, `useYouTubeClip`). `clip: null` renders a skeleton frame. A transparent layer over the iframe swallows clicks so it can't be paused or opened on YouTube; the replay and ½× buttons are ours. `hideTitle` puts a solid bar over the top 3.5rem to hide YouTube's title overlay in Recognize (wireframes §3b open issue 1). It also hides that strip of the signer's frame, so check it against real clips. Space replays the clip (`useHotkeys`), except when a focused button or field owns Space.
 - `CameraView`: `<video>` + landmark `<canvas>` (same `-scale-x-100 object-cover`, or the points drift), loading spinner, Start camera, `CameraError`, `PhaseCue` and `VerdictIcon` on top, plus an optional `errorAction` shown with a camera error. Takes the object returned by `useSignCamera`. Custom markup because no daisyUI component stacks a canvas on a video.

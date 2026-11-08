@@ -3,7 +3,7 @@
 `isRecognizable(item)` is the source of truth. Call it at runtime instead of copying the lists below, because
 they change whenever the model is retrained. This file explains what it returns today and what will change.
 
-Status as of 2026-11-05 (sign model `unit12_hands`, 100 classes; handshape model from `ml/handshape/train_hs.py`).
+Status as of 2026-11-06 (sign model `unit12_hands_rev`, 100 classes; handshape model from `ml/handshape/train_hs.py`).
 
 ## Recognizable now
 
@@ -15,6 +15,10 @@ Status as of 2026-11-05 (sign model `unit12_hands`, 100 classes; handshape model
 | Numbers | **0–9** (0 is scored with the O handshape) |
 
 These signs have two variants, and either one is accepted: DEAF, SAME, WOMAN, WANT, MOVIE, SWIM, RUN.
+
+DEAF is also accepted in either direction (ear to chin, or chin to ear). The dataset almost only shows ear to chin,
+so training plays those clips backwards too (`REVERSIBLE` in `ml/dataset.py`). Before this, chin to ear, the way
+the YouTube reference teaches it, was mostly read as WHO.
 
 ## Not recognizable, and what would change that
 
