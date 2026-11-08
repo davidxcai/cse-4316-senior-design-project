@@ -89,97 +89,17 @@ const LESSON_SPECS: Record<number, LessonSpec[]> = {
       items: signs("SAME", "DIFFERENT", "CIRCLE", "SQUARE", "TRIANGLE", "RED", "BLUE", "GREEN", "YELLOW", "BLACK", "WHITE"),
     },
   ],
-  2: [
-    {
-      n: 1,
-      title: "People & Roles",
-      // "SIGN (ASL)" = two signs, SIGN and ASL (recognition README lists ASL as its own item)
-      items: signs("WHO", "MAN", "WOMAN", "BOY", "GIRL", "FRIEND", "TEACHER", "STUDENT", "LEARN", "SIGN", "ASL", "INTERPRETER"),
-    },
-    { n: 2, title: "Numbers 16–29", items: numbers(16, 29) },
-    {
-      n: 3,
-      title: "Leisure Activities",
-      items: signs("LIKE", "DON'T-LIKE", "WANT", "MOVIE", "READ", "SWIM", "RUN", "COOK", "PLAY", "TRAVEL"),
-    },
-    // Double letters are a fingerspelling skill, not separate items
-    { n: 4, title: "Fingerspelling 2", items: letters("DGHKPQRUV") },
-  ],
-  3: [
-    {
-      n: 1,
-      title: "Home & Residence",
-      items: signs("LIVE", "HOUSE", "APARTMENT", "DORM", "CITY", "ALONE", "ROOMMATE", "CAT", "DOG"),
-    },
-    {
-      n: 2,
-      title: "Around Campus",
-      items: signs("CLASSROOM", "BATHROOM", "LIBRARY", "OFFICE", "DOOR", "WINDOW", "LEFT", "RIGHT", "UPSTAIRS"),
-    },
-    { n: 3, title: "Transportation", items: signs("CAR", "BUS", "BIKE", "WALK", "TRAIN", "DRIVE", "WORK", "SCHOOL") },
-    { n: 4, title: "Numbers 30–66", items: [...numbers(30, 66), ...letters("ZPQY")] },
-  ],
-  4: [
-    {
-      n: 1,
-      title: "Immediate Family",
-      items: signs("FAMILY", "MOTHER", "FATHER", "PARENTS", "SISTER", "BROTHER", "BABY", "TWINS", "OLDER", "YOUNGER"),
-    },
-    {
-      n: 2,
-      title: "Extended Family",
-      items: signs("GRANDMOTHER", "GRANDFATHER", "AUNT", "UNCLE", "COUSIN", "MARRIED", "DIVORCED", "DIED"),
-    },
-    // I/ME, HE/SHE, HIS/HER are one sign each in ASL; the second/ASL-Citizen gloss is used
-    { n: 3, title: "Pronouns", items: signs("ME", "YOU", "HE", "WE", "THEY", "MY", "YOUR", "HIS", "OUR") },
-    { n: 4, title: "Numbers 67–100", items: [...numbers(67, 100), ...letters("J")] },
-  ],
-  5: [
-    {
-      n: 1,
-      title: "Days & Time",
-      items: signs(
-        "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY",
-        "TODAY", "TOMORROW", "YESTERDAY", "WEEK", "MORNING", "AFTERNOON", "NIGHT",
-      ),
-    },
-    { n: 2, title: "Chores", items: signs("CLEAN", "WASH", "DISHES", "LAUNDRY", "SHOP", "FINISH", "NOT-YET") },
-    {
-      n: 3,
-      title: "Everyday Activities",
-      items: signs("EAT", "BREAKFAST", "LUNCH", "DINNER", "SLEEP", "STUDY", "EXERCISE", "ALWAYS", "SOMETIMES", "NEVER"),
-    },
-    {
-      n: 4,
-      title: "Jobs",
-      items: [...signs("WORK", "JOB", "DOCTOR", "NURSE", "LAWYER", "MECHANIC", "BOSS"), ...letters("GH")],
-    },
-  ],
-  6: [
-    // TODO: fill in once the unit story is chosen (curriculum.md: e.g. "The Gum Story")
-    { n: 1, title: "Story Vocabulary", items: [] },
-    // M2 grammar only; in M1 this row carries just the culture note (Gallaudet history)
-    { n: 2, title: "Narrative Grammar", items: [] },
-  ],
 };
 
 type UnitSpec = { id: number; title: string; description: string; optional?: boolean };
 
 const UNIT_SPECS: UnitSpec[] = [
   { id: 1, title: "Introducing Oneself", description: "Greetings, alphabet, numbers 1–15, colors" },
-  { id: 2, title: "Exchanging Personal Information", description: "People, numbers 16–29, hobbies, fingerspelling" },
-  { id: 3, title: "Discussing Living Situations", description: "Home, campus, transportation, numbers 30–66" },
-  { id: 4, title: "Talking About Family", description: "Family, pronouns, numbers 67–100" },
-  { id: 5, title: "Telling About Activities", description: "Days, chores, daily activities, jobs" },
-  { id: 6, title: "Storytelling", description: "Story vocabulary, narrative grammar", optional: true },
 ];
 
 /** Review checkpoints (curriculum.md, SJSU pacing): which unit they close and which units they cover. */
-const REVIEWS: { unitId: number; id: string; title: string; covers: number[] }[] = [
-  { unitId: 2, id: "2.review", title: "Review A", covers: [1, 2] },
-  { unitId: 4, id: "4.review", title: "Review B", covers: [3, 4] },
-  { unitId: 5, id: "5.final", title: "Final Review", covers: [1, 2, 3, 4, 5] },
-];
+// Units 2-6 and their reviews (A, B, Final) live on the units-2-6 branch.
+const REVIEWS: { unitId: number; id: string; title: string; covers: number[] }[] = [];
 
 // ---------------------------------------------------------------------------
 // Assembly

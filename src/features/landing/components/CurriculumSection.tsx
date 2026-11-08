@@ -1,11 +1,6 @@
 // Titles from curriculum.md "Unit lesson plans".
-const UNITS = [
+const UNITS: { title: string; optional?: boolean }[] = [
   { title: "Introducing Oneself" },
-  { title: "Exchanging Personal Information" },
-  { title: "Discussing Living Situations" },
-  { title: "Talking About Family" },
-  { title: "Telling About Activities" },
-  { title: "Storytelling", optional: true },
 ];
 
 export default function CurriculumSection() {
