@@ -3,6 +3,7 @@ import SignOutButton from "../auth/SignOutButton";
 import CameraSelect from "./components/CameraSelect";
 import HandSelect from "./components/HandSelect";
 import ProfileHeader from "./components/ProfileHeader";
+import ResetProgress from "./components/ResetProgress";
 
 export default function ProfilePage() {
   return (
@@ -16,6 +17,7 @@ export default function ProfilePage() {
         </h2>
         <CameraSelect />
         <HandSelect />
+        <ResetProgress />
       </section>
       <div>
         <SignOutButton />

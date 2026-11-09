@@ -49,6 +49,15 @@ export async function completeLesson(lessonId: string): Promise<Completion> {
   return toCompletion(data);
 }
 
+/**
+ * Deletes all of the signed-in user's progress: completions, lesson resume points and weak signs, in one
+ * transaction (public.reset_progress). Invalidate completions, weak signs and lesson progress afterwards.
+ */
+export async function resetProgress(): Promise<void> {
+  const { error } = await supabase.rpc("reset_progress");
+  if (error) throw error;
+}
+
 export const completionKeys = {
   all: ["completions"] as const,
   list: (userId: string) => ["completions", userId] as const,
