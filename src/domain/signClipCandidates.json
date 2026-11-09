@@ -1,0 +1,1272 @@
+{
+  "sign:HELLO": [
+    {
+      "videoId": "3e-ApPGng3g",
+      "title": "Hello ASL",
+      "channel": "ASL Interactive",
+      "seconds": 9
+    },
+    {
+      "videoId": "U9Ue-LqKNo4",
+      "title": "Learn How to Sign Hello in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "MbggypBmHGw",
+      "title": "hello in ASL",
+      "channel": "Start ASL",
+      "seconds": 5
+    },
+    {
+      "videoId": "KZ_6liUpjeA",
+      "title": "ASL sign for hello / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 9
+    },
+    {
+      "videoId": "FVjpLa8GqeM",
+      "title": "Hello",
+      "channel": "Signs",
+      "seconds": 2
+    }
+  ],
+  "sign:NICE": [
+    {
+      "videoId": "cxWACfosr_0",
+      "title": "Nice ASL",
+      "channel": "ASL Interactive",
+      "seconds": 7
+    },
+    {
+      "videoId": "gCPMZbEfr8o",
+      "title": "nice in ASL",
+      "channel": "Start ASL",
+      "seconds": 8
+    }
+  ],
+  "sign:MEET": [
+    {
+      "videoId": "UnWOfpS6FHQ",
+      "title": "Meet ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "GIsP4Tll8_4",
+      "title": "Learn How to Sign Meet in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "2kHrA-H8P-o",
+      "title": "meet in ASL",
+      "channel": "Start ASL",
+      "seconds": 9
+    },
+    {
+      "videoId": "FC1R9kyegJY",
+      "title": "MEET",
+      "channel": "Signs",
+      "seconds": 3
+    },
+    {
+      "videoId": "eP816GBFVeg",
+      "title": "meet",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:NAME": [
+    {
+      "videoId": "_EC5gTknGkc",
+      "title": "name ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "gfwk3dUVTGQ",
+      "title": "Learn How to Sign Name in ASL 2 | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    },
+    {
+      "videoId": "IkZ3Tvo9n88",
+      "title": "Learn How to Sign Name in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "yT-tvthXGO8",
+      "title": "name in ASL",
+      "channel": "Start ASL",
+      "seconds": 7
+    },
+    {
+      "videoId": "GbeC9TFuSX4",
+      "title": "NAME",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:MY": [
+    {
+      "videoId": "za1yoPezCQQ",
+      "title": "my ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "eKhkphHpIFk",
+      "title": "Learn How to Sign My in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "IKSfqjBWedg",
+      "title": "my",
+      "channel": "Signs",
+      "seconds": 5
+    }
+  ],
+  "sign:YOUR": [
+    {
+      "videoId": "IfIVeIpB400",
+      "title": "Your ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "bM-QFCNG2gQ",
+      "title": "Learn How to Sign Your in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "FoNdrLOo4zQ",
+      "title": "your in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "-1Hz72xltNk",
+      "title": "YOUR",
+      "channel": "Signs",
+      "seconds": 2
+    }
+  ],
+  "sign:DEAF": [
+    {
+      "videoId": "SGyoW-LEoXM",
+      "title": "deaf ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "yMgTxNoBrm8",
+      "title": "Learn How to Sign Deaf in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 11
+    },
+    {
+      "videoId": "a3qC7RTkDFo",
+      "title": "deaf in ASL",
+      "channel": "Start ASL",
+      "seconds": 8
+    },
+    {
+      "videoId": "3funmsrayrA",
+      "title": "ASL sign for deaf / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 10
+    },
+    {
+      "videoId": "wUyOYgr2GT4",
+      "title": "ASL sign for deaf / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 14
+    }
+  ],
+  "sign:HEARING": [
+    {
+      "videoId": "butL_IJgF8I",
+      "title": "hearing ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "bsT168xrgds",
+      "title": "Learn How to Sign Hearing in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "Gp739k6h738",
+      "title": "hearing in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "zdpQqYnZ0i4",
+      "title": "ASL sign for hearing / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 14
+    },
+    {
+      "videoId": "EOUkGLfYQ7M",
+      "title": "hearing",
+      "channel": "Signs",
+      "seconds": 4
+    }
+  ],
+  "sign:YES": [
+    {
+      "videoId": "MG9_jIERKKs",
+      "title": "yes ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "Ls3w6BnETEo",
+      "title": "Yes ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "axtjlIrxPm0",
+      "title": "Learn How to Sign Yes in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "DAWUn-AliYE",
+      "title": "yes in ASL",
+      "channel": "Start ASL",
+      "seconds": 7
+    },
+    {
+      "videoId": "DD0e5uNqKLk",
+      "title": "ASL sign for yes / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 11
+    }
+  ],
+  "sign:NO": [
+    {
+      "videoId": "dcVPPF9FtHc",
+      "title": "no ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "RPhIKkeFFfo",
+      "title": "Learn How to Sign No in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "I1USnQaJoIc",
+      "title": "no in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "vo3gbhR2GK4",
+      "title": "ASL sign for no / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 12
+    },
+    {
+      "videoId": "QJXKaOSyl4o",
+      "title": "NO",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:THANK-YOU": [
+    {
+      "videoId": "qlWPnATjNx0",
+      "title": "Learn How to Sign Thank You in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    },
+    {
+      "videoId": "3KKVbMwXpEA",
+      "title": "thank you in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "bT5i7wnxE0U",
+      "title": "thank you in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "Nz0FvglU584",
+      "title": "ASL sign for thank you / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 17
+    },
+    {
+      "videoId": "8w4WszCWR0Q",
+      "title": "THANK YOU | ASL Glossary | The ASL Shop",
+      "channel": "The ASL Shop",
+      "seconds": 16
+    }
+  ],
+  "sign:PLEASE": [
+    {
+      "videoId": "OD-VNnmNtvQ",
+      "title": "please ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "8csk-RR1T2o",
+      "title": "Learn How to Sign Please in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "K0mD_RcESHI",
+      "title": "please in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "En87oHyMdjg",
+      "title": "ASL sign for please / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 17
+    },
+    {
+      "videoId": "b2TJnFb5cqI",
+      "title": "PLEASE | ASL Glossary | The ASL Shop",
+      "channel": "The ASL Shop",
+      "seconds": 18
+    }
+  ],
+  "sign:SORRY": [
+    {
+      "videoId": "_MHkMF3t8zc",
+      "title": "sorry in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "tQTaYwD19Tw",
+      "title": "ASL sign for sorry / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 6
+    },
+    {
+      "videoId": "vq_13PDBiZY",
+      "title": "SORRY | ASL Glossary | The ASL Shop",
+      "channel": "The ASL Shop",
+      "seconds": 25
+    }
+  ],
+  "letter:A": [
+    {
+      "videoId": "nPp9zm9y5n0",
+      "title": "A ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "Niugvthm_JQ",
+      "title": "A ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "ZaEbzeOjFR8",
+      "title": "Learn How to Sign A in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "9qsBKrkvpms",
+      "title": "a",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "letter:S": [
+    {
+      "videoId": "ZZkPzu_0jv8",
+      "title": "S ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "mskn8dAEYWc",
+      "title": "Learn How to Sign S in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:T": [
+    {
+      "videoId": "mnYOS_fa82Q",
+      "title": "T ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "uyPIseSq3Q4",
+      "title": "Learn How to Sign T in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    }
+  ],
+  "letter:M": [
+    {
+      "videoId": "tJHGfFX8f8w",
+      "title": "M ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "2Pf4OPD5yGA",
+      "title": "Learn How to Sign M in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:N": [
+    {
+      "videoId": "dXElQMdjp0I",
+      "title": "N ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "dX46A2wlT7o",
+      "title": "Learn How to Sign N in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 11
+    }
+  ],
+  "letter:E": [
+    {
+      "videoId": "AoyRh2tb9oA",
+      "title": "E ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "6WhSp_ju_SU",
+      "title": "Learn How to Sign E in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:B": [
+    {
+      "videoId": "sTTTB_ViC-0",
+      "title": "B ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "ESBGaU31PTE",
+      "title": "Learn How to Sign B in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:C": [
+    {
+      "videoId": "gItl8eBcq6w",
+      "title": "C ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "XRDCsTqVWHA",
+      "title": "Learn How to Sign C in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:D": [
+    {
+      "videoId": "cHybA5SVFw4",
+      "title": "D ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "_m4_E6tP4d0",
+      "title": "Learn How to Sign D in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:F": [
+    {
+      "videoId": "_9cFfaV7MLc",
+      "title": "F ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "zYhG_Xc-MGw",
+      "title": "Learn How to Sign F in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:G": [
+    {
+      "videoId": "TxZl9ovOKbA",
+      "title": "G ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "Nko3NgTA8gs",
+      "title": "Learn How to Sign G in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:H": [
+    {
+      "videoId": "r2lXfwwPiLc",
+      "title": "H ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "iwEf90oD0cE",
+      "title": "Learn How to Sign H in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:I": [
+    {
+      "videoId": "rcWzmDUzsKU",
+      "title": "I ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "cL1qV6q8SMs",
+      "title": "I",
+      "channel": "Signs",
+      "seconds": 5
+    }
+  ],
+  "letter:J": [
+    {
+      "videoId": "lnkpFhfIiUU",
+      "title": "J ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "QUBBL39Xg1k",
+      "title": "Learn How to Sign J in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:K": [
+    {
+      "videoId": "UOHXKrdz1SU",
+      "title": "K ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "Z2E2cRz9zDs",
+      "title": "Learn How to Sign K in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    }
+  ],
+  "letter:L": [
+    {
+      "videoId": "tyMSIfP-rys",
+      "title": "L ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "K44WMfCsAPg",
+      "title": "Learn How to Sign L in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:O": [
+    {
+      "videoId": "haTt1woi6xA",
+      "title": "O ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "QfxCBloperU",
+      "title": "Learn How to Sign O in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    },
+    {
+      "videoId": "kP9xOmHakxw",
+      "title": "Learn How to Sign O in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "letter:P": [
+    {
+      "videoId": "TGHtCs__TaE",
+      "title": "P ASL",
+      "channel": "ASL Interactive",
+      "seconds": 6
+    },
+    {
+      "videoId": "bS4DASuTSNg",
+      "title": "Learn How to Sign P in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "X-r3mXuZPF0",
+      "title": "Learn How to Sign P in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:Q": [
+    {
+      "videoId": "__penFwHI0U",
+      "title": "Q ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "Cc7Ty-QBVwY",
+      "title": "Learn How to Sign Q in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:R": [
+    {
+      "videoId": "otVDSoGSea8",
+      "title": "R ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "KAxGLfYOncM",
+      "title": "Learn How to Sign R in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "letter:U": [
+    {
+      "videoId": "0jZfNRXkhp0",
+      "title": "U ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    }
+  ],
+  "letter:V": [
+    {
+      "videoId": "EDH_Vc3M6W8",
+      "title": "V ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "bpWw-jFfZBM",
+      "title": "Learn How to Sign V in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "letter:W": [
+    {
+      "videoId": "TlKU6JLMr7U",
+      "title": "W ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "qhrmUI8WNDE",
+      "title": "Learn How to Sign W in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "letter:X": [
+    {
+      "videoId": "5rICeEzhvds",
+      "title": "X ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "B8-H-f38-O4",
+      "title": "Learn How to Sign X in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    }
+  ],
+  "letter:Y": [
+    {
+      "videoId": "bnOKmOtHDkc",
+      "title": "Y ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "8AJmuAMN2OQ",
+      "title": "Learn How to Sign Y in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "letter:Z": [
+    {
+      "videoId": "QU8Ad6lNdT0",
+      "title": "Z ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "MpqOc_kSl6E",
+      "title": "Learn How to Sign Z in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "number:1": [
+    {
+      "videoId": "Qvu8VbELXZs",
+      "title": "1 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "XxBObzAONq0",
+      "title": "Learn How to Sign 1 in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "number:2": [
+    {
+      "videoId": "nCsBLVwr9CM",
+      "title": "2 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "H0jU2JW-KWY",
+      "title": "Learn How to Sign 2 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "number:3": [
+    {
+      "videoId": "m6O9phK-iVQ",
+      "title": "3 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "lAWqKOCPC30",
+      "title": "Learn How to Sign 3 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 11
+    }
+  ],
+  "number:4": [
+    {
+      "videoId": "OdNRh2LNCNw",
+      "title": "4 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "RlVhsBZ3MTU",
+      "title": "Learn How to Sign 4 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    }
+  ],
+  "number:5": [
+    {
+      "videoId": "vMe3UZImYOA",
+      "title": "5 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "VmwILpXMCWU",
+      "title": "Learn How to Sign 5 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "7rhyjZEpqVw",
+      "title": "FIVE",
+      "channel": "Signs",
+      "seconds": 2
+    }
+  ],
+  "number:6": [
+    {
+      "videoId": "_qyAmG0rwxE",
+      "title": "6 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "IHjHsNPfxEo",
+      "title": "Learn How to Sign 6 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 14
+    },
+    {
+      "videoId": "CuAcagWcLCs",
+      "title": "six",
+      "channel": "Signs",
+      "seconds": 2
+    }
+  ],
+  "number:7": [
+    {
+      "videoId": "TBFrPfMvf4s",
+      "title": "7 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "PNUGjwkci-Q",
+      "title": "Learn How to Sign 7 in ASL | LearnHowToSign .org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "jaOgr8FVFck",
+      "title": "seven",
+      "channel": "Signs",
+      "seconds": 4
+    }
+  ],
+  "number:8": [
+    {
+      "videoId": "3eALo7CZ6m8",
+      "title": "8 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "M1LTB68D1-U",
+      "title": "Learn How to Sign 8 in ASL | LearnHowToSign .org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "ZdZco8j2BNo",
+      "title": "eight",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "number:9": [
+    {
+      "videoId": "qpqZy_EWkyU",
+      "title": "9 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "-L7fMKyB-wU",
+      "title": "9 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "Ojxi-q7jK7A",
+      "title": "Learn How to Sign 9 in ASL | LearnHowToSign .org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "number:10": [
+    {
+      "videoId": "adUABV4tNk8",
+      "title": "10 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "4AsxrhAlxkU",
+      "title": "Learn How to Sign 10 in ASL | LearnHowToSign .org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "number:11": [
+    {
+      "videoId": "1w64M9ymc8E",
+      "title": "11 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "lBCPdB4oBZ0",
+      "title": "Learn How to Sign 11 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    }
+  ],
+  "number:12": [
+    {
+      "videoId": "C4JJdLbW5lw",
+      "title": "12 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "z29X3s8Bmew",
+      "title": "Learn How to Sign 12 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 7
+    }
+  ],
+  "number:13": [
+    {
+      "videoId": "Ugtg1TGhnK4",
+      "title": "13 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "HEw5WmuTxNU",
+      "title": "Learn How to Sign 13 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "number:14": [
+    {
+      "videoId": "-4rYJFUUE24",
+      "title": "14 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "gbfjBmVHTKc",
+      "title": "Learn How to Sign 14 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 10
+    }
+  ],
+  "number:15": [
+    {
+      "videoId": "jYeUUOAb-FM",
+      "title": "15 ASL",
+      "channel": "ASL Interactive",
+      "seconds": 5
+    },
+    {
+      "videoId": "77vJBMRvh38",
+      "title": "Learn How to Sign 15 in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    }
+  ],
+  "sign:SAME": [
+    {
+      "videoId": "SwJ6NBn4CX4",
+      "title": "same ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "NeopBNvC6MA",
+      "title": "same ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "jnh_Mq0_f64",
+      "title": "same in ASL",
+      "channel": "Start ASL",
+      "seconds": 7
+    },
+    {
+      "videoId": "cnX45VWbjmc",
+      "title": "SAME",
+      "channel": "Signs",
+      "seconds": 3
+    },
+    {
+      "videoId": "o1NMZAc7vO4",
+      "title": "same",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:DIFFERENT": [
+    {
+      "videoId": "68bpIC3d2oU",
+      "title": "different ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "PgtItCtRs6s",
+      "title": "different in ASL",
+      "channel": "Start ASL",
+      "seconds": 7
+    },
+    {
+      "videoId": "EunD6JXshgY",
+      "title": "DIFFERENT",
+      "channel": "Signs",
+      "seconds": 3
+    },
+    {
+      "videoId": "59tKArncxqo",
+      "title": "different",
+      "channel": "Signs",
+      "seconds": 4
+    },
+    {
+      "videoId": "KTy-PKpWS-Y",
+      "title": "different",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:CIRCLE": [
+    {
+      "videoId": "NK6-li6HhH0",
+      "title": "Circle ASL",
+      "channel": "ASL Interactive",
+      "seconds": 6
+    }
+  ],
+  "sign:SQUARE": [
+    {
+      "videoId": "sE3m5FQ8xuQ",
+      "title": "SQUARE",
+      "channel": "Signs",
+      "seconds": 5
+    }
+  ],
+  "sign:TRIANGLE": [
+    {
+      "videoId": "vLuW3XF3pnY",
+      "title": "TRIANGLE",
+      "channel": "Signs",
+      "seconds": 4
+    }
+  ],
+  "sign:RED": [
+    {
+      "videoId": "rfRkidzrkQs",
+      "title": "red ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "rUHpdNebm_8",
+      "title": "Learn How to Sign Red in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "WBFI-rXXFRc",
+      "title": "red in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "SFuWAzmHUWw",
+      "title": "ASL sign for red / Learn ASL ❤️",
+      "channel": "ASLTutorSean",
+      "seconds": 13
+    },
+    {
+      "videoId": "lDBvf8SoQuc",
+      "title": "RED",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:BLUE": [
+    {
+      "videoId": "4m5XELMXdCg",
+      "title": "blue ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "NOYh2xT6Hgc",
+      "title": "Learn How to Sign Blue in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "fAwUVlehq7k",
+      "title": "blue in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "qkoJDwSyEFo",
+      "title": "ASL sign for blue / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 16
+    },
+    {
+      "videoId": "t2T1_LMVTp8",
+      "title": "BLUE",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:GREEN": [
+    {
+      "videoId": "29OyUsSL4lQ",
+      "title": "green ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "fYciqruLGlI",
+      "title": "Learn How to Sign Green in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "7rr152yPyoI",
+      "title": "green in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "l0s--EmggsY",
+      "title": "ASL sign for green / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 16
+    },
+    {
+      "videoId": "WrkXE5l6udM",
+      "title": "GREEN",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:YELLOW": [
+    {
+      "videoId": "rUtj9hzbUvM",
+      "title": "yellow ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "wohkInepErQ",
+      "title": "Learn How to Sign Yellow in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 8
+    },
+    {
+      "videoId": "vQNQmT8h36Q",
+      "title": "yellow in ASL",
+      "channel": "Start ASL",
+      "seconds": 6
+    },
+    {
+      "videoId": "M5BkubJ319E",
+      "title": "ASL sign for yellow / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 10
+    },
+    {
+      "videoId": "nK4_8-U-Y9I",
+      "title": "YELLOW",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:BLACK": [
+    {
+      "videoId": "WWYH5k5uRQ4",
+      "title": "black ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "jWrsMGK2cr0",
+      "title": "Learn How to Sign Black in ASL | LearnHowToSign",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "ewlE8c8AS70",
+      "title": "black in ASL",
+      "channel": "Start ASL",
+      "seconds": 7
+    },
+    {
+      "videoId": "w0jKB3hteBw",
+      "title": "ASL sign for black / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 15
+    },
+    {
+      "videoId": "O5_4x8p5t4U",
+      "title": "black",
+      "channel": "Signs",
+      "seconds": 3
+    }
+  ],
+  "sign:WHITE": [
+    {
+      "videoId": "Uw1mhtt9K34",
+      "title": "white ASL",
+      "channel": "ASL Interactive",
+      "seconds": 4
+    },
+    {
+      "videoId": "8K1WAo3AiPw",
+      "title": "Learn How to Sign White in ASL | LearnHowToSign.org",
+      "channel": "Learn How to Sign",
+      "seconds": 9
+    },
+    {
+      "videoId": "WmOevvqmUzE",
+      "title": "white in ASL",
+      "channel": "Start ASL",
+      "seconds": 5
+    },
+    {
+      "videoId": "da5r5VZlrLQ",
+      "title": "ASL sign for white / Learn ASL",
+      "channel": "ASLTutorSean",
+      "seconds": 12
+    },
+    {
+      "videoId": "v8h6mw4zGys",
+      "title": "WHITE",
+      "channel": "Signs",
+      "seconds": 4
+    }
+  ]
+}

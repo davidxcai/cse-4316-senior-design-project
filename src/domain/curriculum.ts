@@ -1,0 +1,162 @@
+/**
+ * The course: units → lessons → items, transcribed from curriculum.md "## Unit lesson plans".
+ * Pure data. Edit this file when curriculum.md changes. See domain.md for the mapping choices.
+ */
+import type { Item } from "../recognition";
+import { CULTURE_NOTES, type CultureNote } from "./cultureNotes";
+import { itemKey } from "./signContent";
+
+export type { CultureNote };
+
+export type LessonKind = "lesson" | "quiz" | "review";
+
+export type Lesson = {
+  /** '1.1', '1.quiz', '2.review' / '4.review' / '5.final'. Stored in lesson_completions.lesson_id. */
+  id: string;
+  unitId: number;
+  /** '1.1' for lessons, '' for quiz/review rows */
+  label: string;
+  title: string;
+  kind: LessonKind;
+  items: Item[];
+  /** culture step content [S.24–26]; null = the lesson has no culture step */
+  culture: CultureNote | null;
+  /** quiz / review: ids of the regular lessons it covers, in order (used to spread questions evenly). [] for lessons */
+  covers: string[];
+};
+
+export type Unit = {
+  id: number;
+  title: string;
+  description: string;
+  minutes: number;
+  optional: boolean;
+  /** lessons in order, then the unit quiz, then the review checkpoint if the unit has one */
+  lessons: Lesson[];
+};
+
+/** Estimated minutes per row (lesson, quiz or review). Unit minutes = this × row count. A guess; tune with real sessions. */
+export const MINUTES_PER_LESSON = 5;
+
+// ---------------------------------------------------------------------------
+// Item builders
+// ---------------------------------------------------------------------------
+
+const signs = (...glosses: string[]): Item[] => glosses.map((gloss) => ({ kind: "sign", gloss }));
+
+const letters = (chars: string): Item[] => [...chars].map((char) => ({ kind: "letter", char }));
+
+const numbers = (from: number, to: number): Item[] =>
+  Array.from({ length: to - from + 1 }, (_, i) => ({ kind: "number", value: from + i }));
+
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+/** Union of the lessons' items, first occurrence wins, order kept. */
+function mergeItems(lessons: readonly Lesson[]): Item[] {
+  const seen = new Set<string>();
+  const out: Item[] = [];
+  for (const lesson of lessons) {
+    for (const item of lesson.items) {
+      const key = itemKey(item);
+      if (!seen.has(key)) {
+        seen.add(key);
+        out.push(item);
+      }
+    }
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------
+// Lessons per unit (vocabulary track only; M2 sentence work isn't modeled here)
+// ---------------------------------------------------------------------------
+
+type LessonSpec = { n: number; title: string; items: Item[] };
+
+const LESSON_SPECS: Record<number, LessonSpec[]> = {
+  1: [
+    {
+      n: 1,
+      title: "Greetings",
+      items: signs("HELLO", "NICE", "MEET", "NAME", "MY", "YOUR", "DEAF", "HEARING", "YES", "NO", "THANK-YOU", "PLEASE", "SORRY"),
+    },
+    // curriculum.md: "fist" letters A, S, T, M, N, E first
+    { n: 2, title: "Alphabet", items: [...letters("ASTMNE"), ...letters(ALPHABET.replace(/[ASTMNE]/g, ""))] },
+    { n: 3, title: "Numbers 1–15", items: numbers(1, 15) },
+    {
+      n: 4,
+      title: "Shapes & Colors",
+      items: signs("SAME", "DIFFERENT", "CIRCLE", "SQUARE", "TRIANGLE", "RED", "BLUE", "GREEN", "YELLOW", "BLACK", "WHITE"),
+    },
+  ],
+};
+
+type UnitSpec = { id: number; title: string; description: string; optional?: boolean };
+
+const UNIT_SPECS: UnitSpec[] = [
+  { id: 1, title: "Introducing Oneself", description: "Greetings, alphabet, numbers 1–15, colors" },
+];
+
+/** Review checkpoints (curriculum.md, SJSU pacing): which unit they close and which units they cover. */
+// Units 2-6 and their reviews (A, B, Final) live on the units-2-6 branch.
+const REVIEWS: { unitId: number; id: string; title: string; covers: number[] }[] = [];
+
+// ---------------------------------------------------------------------------
+// Assembly
+// ---------------------------------------------------------------------------
+
+const regularLessons = (unitId: number): Lesson[] =>
+  LESSON_SPECS[unitId].map(({ n, title, items }) => ({
+    id: `${unitId}.${n}`,
+    unitId,
+    label: `${unitId}.${n}`,
+    title,
+    kind: "lesson",
+    items,
+    culture: CULTURE_NOTES[`${unitId}.${n}`] ?? null,
+    covers: [],
+  }));
+
+function buildUnit(spec: UnitSpec): Unit {
+  const lessons = regularLessons(spec.id);
+  const rows: Lesson[] = [
+    ...lessons,
+    { id: `${spec.id}.quiz`, unitId: spec.id, label: "", title: "Unit Quiz", kind: "quiz", items: mergeItems(lessons), culture: null, covers: lessons.map((l) => l.id) },
+  ];
+  for (const review of REVIEWS.filter((r) => r.unitId === spec.id)) {
+    const covered = review.covers.flatMap(regularLessons);
+    rows.push({
+      id: review.id,
+      unitId: spec.id,
+      label: "",
+      title: review.title,
+      kind: "review",
+      items: mergeItems(covered),
+      culture: null,
+      covers: covered.map((l) => l.id),
+    });
+  }
+  return {
+    id: spec.id,
+    title: spec.title,
+    description: spec.description,
+    minutes: MINUTES_PER_LESSON * rows.length,
+    optional: spec.optional ?? false,
+    lessons: rows,
+  };
+}
+
+export const UNITS: readonly Unit[] = UNIT_SPECS.map(buildUnit);
+
+const LESSONS_BY_ID = new Map(UNITS.flatMap((u) => u.lessons).map((l) => [l.id, l]));
+
+export function findLesson(id: string): Lesson | undefined {
+  return LESSONS_BY_ID.get(id);
+}
+
+export function findUnit(id: number): Unit | undefined {
+  return UNITS.find((u) => u.id === id);
+}
+
+/** Every distinct item in the course, in curriculum order. Distractor pool for Recognize questions. */
+export const ALL_ITEMS: readonly Item[] = mergeItems(UNITS.flatMap((u) => u.lessons));

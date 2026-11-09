@@ -8,3 +8,8 @@ public/model/fixture.json
 .vercel
 .env*
 *.tsbuildinfo
+
+# OS / tool scratch
+.DS_Store
+supabase/.temp
+scripts/.cache
